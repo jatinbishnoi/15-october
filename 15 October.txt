@@ -1,0 +1,30 @@
+					15 October,2023
+1.)
+In CSS, the `var()` function is used to insert the value of a custom property (also known as a CSS variable) into a style property value. CSS variables are entities defined by CSS authors that contain specific values to be reused throughout a document. The `var()` function allows you to use these variables in various places within your stylesheets.
+
+Here's a simple example of how you might use the `var()` function with buttons:
+
+```css
+:root {
+  --primary-color: #3498db; /* Define a CSS variable for the primary color */
+  --secondary-color: #e74c3c; /* Define a CSS variable for the secondary color */
+}
+
+#primaryBtn {
+  background-color: var(--primary-color); /* Use the primary color variable as the background color */
+  color: #fff; /* Set text color to white, for example */
+}
+
+#secondaryBtn {
+  background-color: var(--secondary-color); /* Use the secondary color variable as the background color */
+  color: #fff; /* Set text color to white, for example */
+}
+```
+
+In this example:
+
+1. `:root` is a pseudo-class that refers to the highest-level element in the document (the root element), and it's often used to define global variables. Inside `:root`, we define two CSS variables `--primary-color` and `--secondary-color` with specific color values.
+
+2. The `#primaryBtn` and `#secondaryBtn` selectors target elements with the respective IDs. The `background-color` property of these elements is set using the `var()` function, referencing the global variables we defined earlier.
+
+By using CSS variables and the `var()` function, you make your styles more maintainable and flexible. If you need to change the primary or secondary color, you only need to update the variable in one place (`:root`), and all instances that use that variable will automatically reflect the change.
